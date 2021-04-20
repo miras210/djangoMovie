@@ -1,0 +1,21 @@
+{% include 'movieListApp/base.html' %}
+    <title>Movie List</title>
+</head>
+<body>
+<div class="container mt-5 mb-5">
+    <div class="row">
+        {% for movie in movies %}
+            <div class="card mb-2 mr-2" style="width: 18rem">
+                <div class="card-body">
+                    <h4 class="card-title">Name: <a href="{% url 'movie' movie.id %}">{{ movie.movie_name }}</a></h4>
+                    <p class="card-text">Director: {{ movie.director }}</p>
+                    <p class="card-text">Genre: {{ movie.genre }}</p>
+                    <p class="card-text">Released year: {{ movie.release_year }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <a class="btn btn-success mt-2" href="{% url 'add_movie' %}">Add movie</a>
+</div>
+</body>
+</html>
