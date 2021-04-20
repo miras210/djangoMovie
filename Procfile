@@ -1,1 +1,1 @@
-web: gunicorn pythonMovieChallenge.wsgi.application
+web: gunicorn pythonMovieChallenge.wsgi:application
