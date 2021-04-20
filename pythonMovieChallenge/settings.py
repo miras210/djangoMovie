@@ -77,8 +77,17 @@ WSGI_APPLICATION = 'pythonMovieChallenge.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+
+        'NAME': 'd1g5q2oapk6fu6',
+
+        'USER': 'vzgtwxxouhbfaj',
+
+        'PASSWORD': '5e70e95418bf66e641da266148cee1d727fd10c6b0414090efe4af7525eadf7b',
+
+        'HOST': 'ec2-34-247-118-233.eu-west-1.compute.amazonaws.com',
+
+        'PORT': '5432',
     }
 }
 
