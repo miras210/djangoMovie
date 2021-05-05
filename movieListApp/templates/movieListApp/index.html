@@ -4,6 +4,7 @@
 <body>
 <div class="container mt-5 mb-5">
     <div class="row">
+    {% if movies|length != 0 %}
         {% for movie in movies %}
             <div class="card mb-2 mr-2" style="width: 18rem">
                 <div class="card-body">
@@ -14,6 +15,7 @@
                 </div>
             </div>
         {% endfor %}
+    {% endif %}
     </div>
     <a class="btn btn-success mt-2" href="{% url 'add_movie' %}">Add movie</a>
 </div>
